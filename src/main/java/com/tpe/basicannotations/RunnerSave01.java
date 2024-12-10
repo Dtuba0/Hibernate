@@ -13,5 +13,5 @@ public class RunnerSave01 {
         Session session=sessionFactory.openSession();
 
 
-    }
+    }//gcjchcj
 }
