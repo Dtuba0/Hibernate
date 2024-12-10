@@ -1,4 +1,3 @@
-
 package com.tpe.basicannotations;
 
 import org.hibernate.Session;
@@ -7,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 //uygulamaya veritabanından data cekme işlemi saglar
 public class RunnerFetch01 {
@@ -48,13 +48,40 @@ public class RunnerFetch01 {
         Student student3=session.createQuery(hql, Student.class).uniqueResult();
         System.out.println(student3);
 
+
+
+
+        //tüm kayıtları cekelim
+        //HQL
+        List<Student> studentList =session.createQuery("From Student", Student.class).getResultList();
+        //birden fazla kayıt ya da veri donduruldugunde getResultList() kullanılır.
+        System.out.println("Tüm Öğrenciler");
+        for (Student s:studentList) {
+            System.out.println(s);
+        }
+
+        //sql ile tüm kayıtları cekelim:exercise
+
+
+        //HQL ile grade degeri 98 olan ogrencilerin id ve name bilgilerini getirelim
+        String hql2="select id,name from Student where grade=98";
+        List<Object[]>resultList=session.createQuery(hql2).getResultList();
+        for (Object[] a:resultList
+        ) {
+            System.out.println(Arrays.toString(a));
+        }
+
+
         session.close();
         sf.close();
-
-
-
+        //practice:HQL ile
+        //1-ismi Ali Can olan öğrencileri getirelim
+        //2-tüm öğrencilerin sadece isimlerini getirelim
+        //SQL ile
+        //1-tüm öğrencilerin sadece isimlerini getirelim
 
 
     }
 
 }
+
