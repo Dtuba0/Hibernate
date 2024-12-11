@@ -72,8 +72,7 @@ public class RunnerFetch01 {
         }
 
 
-        session.close();
-        sf.close();
+
         //practice:HQL ile
         //1-ismi Ali Can olan öğrencileri getirelim
         //2-tüm öğrencilerin sadece isimlerini getirelim
@@ -83,7 +82,7 @@ public class RunnerFetch01 {
 
         //------------ODEV------------
         //practice:HQL ile
-
+/*
         System.out.println("-----------------ODEV----------------");
         //1-ismi Ali Can olan öğrencileri getirelim
         String hql3 = "FROM Student WHERE name = 'Ali' and surname = 'Can'";
@@ -91,7 +90,7 @@ public class RunnerFetch01 {
         for (Student w : list1){
             System.out.println(w);
         }
-
+*/
 
         //2-tüm öğrencilerin sadece isimlerini getirelim
         String hql4 = "Select s.name From Student s ";
@@ -100,7 +99,7 @@ public class RunnerFetch01 {
             System.out.println("Name : "+ w);
         }
 
-
+/*
         //SQL ile
         //1-tüm öğrencilerin sadece isimlerini getirelim
         String sql1 = "Select std_name From t_student";
@@ -108,7 +107,9 @@ public class RunnerFetch01 {
         for (String name : studentName){
             System.out.println("Name : "+ name);
         }
-
+*/
+        session.close();
+        sf.close();
     }
 
 }
