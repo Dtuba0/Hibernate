@@ -81,6 +81,33 @@ public class RunnerFetch01 {
         //1-tüm öğrencilerin sadece isimlerini getirelim
 
 
+        //------------ODEV------------
+        //practice:HQL ile
+
+        System.out.println("-----------------ODEV----------------");
+        //1-ismi Ali Can olan öğrencileri getirelim
+        String hql3 = "FROM Student WHERE name = 'Ali' and surname = 'Can'";
+        List<Student> list1 = session.createQuery(hql3, Student.class).getResultList();
+        for (Student w : list1){
+            System.out.println(w);
+        }
+
+
+        //2-tüm öğrencilerin sadece isimlerini getirelim
+        String hql4 = "Select s.name From Student s ";
+        List<String> list2 = session.createQuery(hql4).getResultList();
+        for (String w : list2){
+            System.out.println("Name : "+ w);
+        }
+
+
+        //SQL ile
+        //1-tüm öğrencilerin sadece isimlerini getirelim
+        String sql1 = "Select std_name From t_student";
+        List<String> studentName = session.createSQLQuery(sql1).getResultList();
+        for (String name : studentName){
+            System.out.println("Name : "+ name);
+        }
 
     }
 
