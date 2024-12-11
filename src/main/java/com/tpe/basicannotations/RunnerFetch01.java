@@ -81,7 +81,7 @@ public class RunnerFetch01 {
         //1-tüm öğrencilerin sadece isimlerini getirelim
 
 
-        //jnıoujbnoıpjunpıokımpolö
+
     }
 
 }
