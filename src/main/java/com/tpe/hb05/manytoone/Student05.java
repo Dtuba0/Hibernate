@@ -27,7 +27,7 @@ public class Student05 {
     public Student05() {
     }
 
-    @PrePersist
+    @PrePersist//database'e kaydedilirken bu methodun calısmasını saglıyordu
     public void prePersist(){
         createOn=LocalDateTime.now();
     }

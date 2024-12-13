@@ -12,6 +12,7 @@ public class RunnerSave05 {
         Student05 student1=new Student05(1001,"Ayşe Hanım",10);
         Student05 student2=new Student05(1002,"Ali Bey",5);
         Student05 student3=new Student05(1003,"Veli Bey",15);
+        Student05 student4=new Student05(1004,"Ömer Bey",90);
 
         University university=new University(1,"TechproEducation University");
         student1.setUniversity(university);
@@ -24,16 +25,15 @@ public class RunnerSave05 {
         SessionFactory sessionFactory= config.buildSessionFactory();
         Session session=sessionFactory.openSession();
         Transaction trs= session.beginTransaction();
+        session.save(university);
         session.save(student1);
         session.save(student2);
         session.save(student3);
-        session.save(university);
+
+        session.save(student4);
 
         trs.commit();
         session.close();
         sessionFactory.close();
-
-
-
     }
 }
