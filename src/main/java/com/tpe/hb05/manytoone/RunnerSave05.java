@@ -32,5 +32,8 @@ public class RunnerSave05 {
         trs.commit();
         session.close();
         sessionFactory.close();
+
+
+        ////fghnlfmlnmfxşinmifx
     }
 }
