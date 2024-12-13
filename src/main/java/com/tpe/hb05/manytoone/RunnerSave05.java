@@ -34,6 +34,6 @@ public class RunnerSave05 {
         sessionFactory.close();
 
 
-        ////fghnlfmlnmfxşinmifx
+
     }
 }
