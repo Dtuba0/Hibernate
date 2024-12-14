@@ -47,5 +47,5 @@ public class RunnerFetch06 {
         trs.commit();
         session.close();
         sessionFactory.close();
-//nmmöhjöhcgö hb öbnön
+
     }}
