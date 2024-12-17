@@ -63,13 +63,13 @@ public class RunnerSave09 {
         SessionFactory sessionFactory= config.buildSessionFactory();
         Session session=sessionFactory.openSession();
         Transaction trs= session.beginTransaction();
-/*
+
         session.save(book1);
         session.save(book2);
         session.save(book3);
         session.save(book4);
         session.save(book5);
-*/
+
         //CascadeType.ALL
         session.save(student4);
 
