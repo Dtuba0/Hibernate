@@ -42,5 +42,5 @@ public class RunnerSave10 {
         trs.commit();
         session.close();
         sessionFactory.close();
-    }
+    }////jgvkvçççççççççç
 }
