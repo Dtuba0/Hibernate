@@ -33,7 +33,7 @@ public class RunnerSave13 {
 
 
 
-
+///////jkgçöööööööööööööööööööööööööö
         trs.commit();
         session.close();
         student1.setName("Ahmet");//detached
